@@ -1,5 +1,5 @@
 export const Profile = ({username,tag,location,avatar,stats:{followers,views,likes}}) => {
-  return  <div className ="profile">
+    return <div  className ="profile">
   <div className ="description">
     <img
       src= {avatar}
