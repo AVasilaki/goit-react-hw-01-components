@@ -4,7 +4,10 @@ import data from '../data.json';
 import { Panel } from './Statistics';
 import { Statistics } from './Statistics';
 import friends from '../friends.json';
-import { FriendList } from './Frands';
+import { FriendList } from './Friends';
+import transactions from '../transactions.json';
+import { TransactionHistory } from './TransactionHistory';
+
 export const App = () => {
   return (
     <div>
@@ -19,6 +22,7 @@ export const App = () => {
         <Statistics stats={data} />
       </Panel>
       <FriendList friends={friends} />;
+      <TransactionHistory items={transactions} />;
     </div>
   );
 };
