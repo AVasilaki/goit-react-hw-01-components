@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 export const Panel = ({ title, children }) => {
   return (
     <section className="statistics">
-      <h2 className="title">{title}</h2>
+      {title.length > 0 && <h2 className="title">{title}</h2>}
       {children}
     </section>
   );
@@ -18,4 +19,10 @@ export const Statistics = ({ stats }) => {
       ))}
     </ul>
   );
+};
+
+Statistics.propTypes = {
+  label: PropTypes.string,
+  percentage: PropTypes.number,
+  id: PropTypes.string,
 };
