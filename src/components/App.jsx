@@ -22,8 +22,8 @@ export const App = () => {
         <Panel title="Upload stats">
           <Statistics stats={data} />
         </Panel>
-        <FriendList friends={friends} />;
-        <TransactionHistory items={transactions} />;
+        <FriendList friends={friends} />
+        <TransactionHistory items={transactions} />
       </Container>
     </div>
   );
