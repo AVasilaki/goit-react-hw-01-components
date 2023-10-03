@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Wrapper, Item } from './Friends.styled';
+import { Wrapper, Item, Status } from './Friends.styled';
 export const FriendList = ({ friends }) => {
   return (
     <Wrapper>
@@ -16,6 +16,7 @@ const FriendListItem = ({ friend }) => {
     <li className="item">
       <Item>
         <span className="status"> {friend.isOnline}</span>
+        <Status status={friend.isOnline} />
         <img
           className="avatar"
           src={friend.avatar}
