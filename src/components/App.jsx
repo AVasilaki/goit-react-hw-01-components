@@ -7,22 +7,24 @@ import { Panel } from './Statistics';
 import { Statistics } from './Statistics';
 import { FriendList } from './Friends';
 import { TransactionHistory } from './TransactionHistory';
-
+import { Container } from './App.styled';
 export const App = () => {
   return (
     <div>
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
-      <Panel title="Upload stats">
-        <Statistics stats={data} />
-      </Panel>
-      <FriendList friends={friends} />;
-      <TransactionHistory items={transactions} />;
+      <Container>
+        <Profile
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
+        />
+        <Panel title="Upload stats">
+          <Statistics stats={data} />
+        </Panel>
+        <FriendList friends={friends} />;
+        <TransactionHistory items={transactions} />;
+      </Container>
     </div>
   );
 };
